@@ -1,1 +1,133 @@
 @import './nullify.scss';
+
+/* Values identical for each section:
+* -Font-sizes,
+* -Around padding,
+* -Bottom padding of title + title font-size,
+* -Space between blocks
+** Two blue cards have fixed layouts, the above one is responsive,
+*/
+
+$mobile-width: 320px;
+$mobile-big-width: 375px;
+$tablet-width: 450px;
+$laptop-width: 1024px;
+
+@mixin title {
+  padding-bottom: 1.35rem;
+
+
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+@mixin section-flex {
+  flex: 1 1 33%;
+}
+
+/*$paragraph-fs:;
+$elements-space:;*/
+
+$padding-frame: 1.55rem;
+
+
+/*!Make it stretch
+!Add margins starting from somewhere out of this - [375, 425, 450]
+*/
+
+body {
+
+}
+
+.card {
+  /**/ background-color: beige;
+  /**/ border: 1px solid red;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+
+  height: 100%;
+ 
+  max-width: 375px/*425px*/;
+
+
+  .card-description {
+    @include section-flex;
+    
+    padding: $padding-frame;
+    
+
+    background-color: rgb(255, 255, 255);
+    /**/ border: 1px solid cyan;
+    
+    .card-description-body {
+      text-align: left;
+      line-height: 1.35rem;
+
+      &__title {
+        @include title;
+
+
+        color: rgb(103,170,172);
+      }
+
+      &__beacon-text {
+        padding-bottom: 1rem;
+
+        
+        color: rgb(218,238,125);
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      
+      &__explanatory-text {
+        color: rgb(171, 172, 175);
+        line-height: 1.55rem;
+      }
+    }
+  }
+
+  .card-subscription {
+    /**/ background-color: rgb(156, 226, 203);
+    /**/ border: 1px solid cyan;
+
+    @include section-flex;
+
+    padding: 1.5rem;
+
+    .card-subscription-body {
+      &__title {}
+
+      &__conditions {}
+        &__price {}
+        &__term {}
+        &__profit-summary {}
+      
+      &__signup-btn {}
+    }
+  }
+
+  .card-benefits {
+    /**/ background-color: rgb(226, 156, 183);
+    /**/ border: 1px solid cyan;
+
+    @include section-flex;
+
+    padding: 1.5rem;
+
+    .card-benefits-body {
+      &__title {}
+
+      &__benefits-list {}
+    }
+  }
+}
+
+
+
+
+
+
+
+
