@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  background-color: #e5eff5;
+  font-family: "Karla", sans-serif;
+}
+
+.container {
+  height: 100%;
+}
+@media (min-width: 375px) {
+  .container {
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  max-width: 375px;
+  box-shadow: 0.5px 0.5px 2rem 1.5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+@media (min-width: 375px) {
+  .card {
+    height: auto;
+    margin: 1rem auto;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    max-width: 620px;
+    margin: 3rem auto;
+    flex-flow: row wrap;
+  }
+}
+.card .card-description {
+  flex: 1 1 33%;
+  padding: 1.55rem;
+  background-color: white;
+}
+@media (min-width: 375px) {
+  .card .card-description {
+    max-height: 252.58px;
+  }
+}
+@media (min-width: 1024px) {
+  .card .card-description {
+    flex-basis: 100%;
+  }
+}
+.card .card-description .card-description-body {
+  text-align: left;
+  line-height: 1.35rem;
+}
+.card .card-description .card-description-body__title {
+  margin-bottom: 1.45rem;
+  color: #67aaac;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card .card-description .card-description-body__beacon-text {
+  margin-bottom: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #daee7d;
+}
+.card .card-description .card-description-body__explanatory-text {
+  color: #98a6bd;
+  line-height: 1.55rem;
+}
+.card .card-subscription {
+  flex: 1 1 33%;
+  padding: 1.55rem;
+  background-color: #2ab2af;
+}
+@media (min-width: 375px) {
+  .card .card-subscription {
+    max-height: 252.58px;
+  }
+}
+@media (min-width: 1024px) {
+  .card .card-subscription {
+    flex-basis: 50%;
+  }
+}
+.card .card-subscription .card-subscription-body {
+  color: white;
+  text-align: left;
+}
+.card .card-subscription .card-subscription-body__title {
+  margin-bottom: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.card .card-subscription .card-subscription-body__price {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.card .card-subscription .card-subscription-body__term {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: 35%;
+  opacity: 0.5;
+}
+.card .card-subscription .card-subscription-body__profit-summary {
+  margin-top: 0.65rem;
+  color: #ceffff;
+}
+.card .card-subscription .card-subscription-body__signup-btn {
+  display: block;
+  padding: 1rem;
+  margin-top: 1.91rem;
+  background-color: #c0df34;
+  color: inherit;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0.5px 0.5px 2rem 1px rgba(0, 0, 0, 0.3);
+  border-radius: 7px;
+}
+.card .card-subscription .card-subscription-body__signup-btn:hover, .card .card-subscription .card-subscription-body__signup-btn:focus {
+  box-shadow: 0.5px 0.5px 2.5rem 2px rgba(13, 25, 199, 0.3);
+}
+.card .card-subscription .card-subscription-body__signup-btn:active {
+  outline: 0.5px solid #ceffff;
+}
+.card .card-benefits {
+  flex: 1 1 33%;
+  padding: 1.55rem;
+  background-color: #4abebd;
+}
+@media (min-width: 375px) {
+  .card .card-benefits {
+    max-height: 252.58px;
+  }
+}
+@media (min-width: 1024px) {
+  .card .card-benefits {
+    flex-basis: 50%;
+  }
+}
+.card .card-benefits .card-benefits-body {
+  color: white;
+  text-align: left;
+}
+.card .card-benefits .card-benefits-body__title {
+  margin-bottom: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.card .card-benefits .card-benefits-body__benefits-list {
+  color: #ceffff;
+  line-height: 1.2rem;
+}
+
+footer {
+  display: none;
+}
+@media (min-width: 375px) {
+  footer {
+    display: block;
+    margin-top: auto;
+  }
+}
+footer .attribution {
+  margin-top: auto;
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
