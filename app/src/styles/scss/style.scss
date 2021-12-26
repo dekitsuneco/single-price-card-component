@@ -26,6 +26,7 @@ $laptop-width: 1024px;
   flex: 1 1 33%;
 }
 
+
 $padding-frame: 1.55rem;
 
 
@@ -47,8 +48,7 @@ body {
 
 .card {
   display: flex;
-  flex-direction: column;
-  flex-wrap: no-wrap;
+  flex-flow: column nowrap;
 
   height: 100%;
   max-width: 375px;
@@ -63,6 +63,13 @@ body {
     margin: 1rem auto;
   }
 
+  @media (min-width: $laptop-width) {
+    max-width: 620px;
+    margin: 3rem auto;
+
+    flex-flow: row wrap;
+  }
+
   .card-description {
     @include section-flex;
     
@@ -73,6 +80,10 @@ body {
 
     @media (min-width: $mobile-big-width) {
       max-height: 252.58px;
+    }
+
+    @media (min-width: $laptop-width) {
+      flex-basis: 100%;
     }
     
     .card-description-body {
@@ -112,6 +123,10 @@ body {
 
     @media (min-width: $mobile-big-width) {
       max-height: 252.58px;
+    }
+
+    @media (min-width: $laptop-width) { 
+      flex-basis: 50%;
     }
 
     .card-subscription-body {
@@ -172,6 +187,10 @@ body {
 
     @media (min-width: $mobile-big-width) {
       max-height: 252.58px;
+    }
+
+    @media (min-width: $laptop-width) {
+      flex-basis: 50%;
     }
 
     .card-benefits-body {
