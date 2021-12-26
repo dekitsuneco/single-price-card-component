@@ -30,9 +30,6 @@ $laptop-width: 1024px;
   flex: 1 1 33%;
 }
 
-/*$paragraph-fs:;
-$elements-space:;*/
-
 $padding-frame: 1.55rem;
 
 
@@ -103,6 +100,7 @@ body {
 
     .card-subscription-body {
       color: white;
+      text-align: left;
 
       &__title {
         @include title;
@@ -151,17 +149,26 @@ body {
   }
 
   .card-benefits {
-    /**/ background-color: rgb(226, 156, 183);
+    @include section-flex;
+    
+    padding: $padding-frame;
+
+
+    background-color: rgb(74,190,189);
     /**/ border: 1px solid cyan;
 
-    @include section-flex;
-
-    padding: 1.5rem;
-
     .card-benefits-body {
-      &__title {}
+      color: white;
+      text-align: left;
 
-      &__benefits-list {}
+      &__title {
+        @include title;
+      }
+
+      &__benefits-list {
+        color: rgb(206,255,255);
+        line-height: 1.25rem;
+      }
     }
   }
 }
