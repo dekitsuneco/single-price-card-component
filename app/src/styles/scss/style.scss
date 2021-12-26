@@ -40,6 +40,7 @@ $padding-frame: 1.55rem;
 
 body {
   font-family: 'Karla', sans-serif;
+  background-color:  hsl(204, 43%, 93%);
 }
 
 .card {
@@ -84,7 +85,7 @@ body {
       }
       
       &__explanatory-text {
-        color: rgb(171, 172, 175);
+        color: hsl(218, 22%, 67%);
         line-height: 1.55rem;
       }
     }
@@ -96,7 +97,7 @@ body {
     padding: $padding-frame;
 
 
-    background-color: rgb(43,179,177);
+    background-color: hsl(179, 62%, 43%);
     /**/ border: 1px solid cyan;
 
     .card-subscription-body {
@@ -138,7 +139,7 @@ body {
         margin-top: 1.2rem;
 
 
-        background-color: rgb(191,223,50);
+        background-color: hsl(71, 73%, 54%);
         color: inherit;
         font-weight: 600;
         text-align: center;
