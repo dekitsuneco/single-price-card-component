@@ -173,6 +173,13 @@ body {
 
         box-shadow: .5px .5px 2rem 1px rgba(0, 0, 0, 0.3);
         border-radius: 7px;
+
+        &:hover, &:focus {
+          box-shadow: .5px .5px 2.5rem 2px rgba(13, 25, 199, 0.3);
+        }
+        &:active {
+          outline: .5px solid rgb(206,255,255);
+        }
       }
     }
   }
