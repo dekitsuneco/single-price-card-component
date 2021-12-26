@@ -1,18 +1,14 @@
 @import './nullify.scss';
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;700&display=swap');
 
-/* Values identical for each section:
-* -Font-sizes,
-* -Around padding,
-* -Bottom padding of title + title font-size,
-* -Space between blocks
-** Two blue cards have fixed layouts, the above one is responsive,
-*/
+
 
 $mobile-width: 320px;
 $mobile-big-width: 375px;
 $tablet-width: 450px;
 $laptop-width: 1024px;
+
+$padding-frame: 1.55rem;
 
 @mixin title {
   margin-bottom: 1.3rem;
@@ -26,8 +22,6 @@ $laptop-width: 1024px;
   flex: 1 1 33%;
 }
 
-
-$padding-frame: 1.55rem;
 
 
 
@@ -78,8 +72,7 @@ body {
   }
 
   .card-description {
-    @include section-flex;
-    
+    @include section-flex; 
     padding: $padding-frame;
     
 
@@ -122,7 +115,6 @@ body {
 
   .card-subscription {
     @include section-flex;
-    
     padding: $padding-frame;
 
 
@@ -193,7 +185,6 @@ body {
 
   .card-benefits {
     @include section-flex;
-    
     padding: $padding-frame;
 
 
@@ -233,6 +224,8 @@ footer {
 
   .attribution { 
     margin-top: auto;
+
+
     font-size: 11px;
     text-align: center;
 
