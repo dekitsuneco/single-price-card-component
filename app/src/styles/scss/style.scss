@@ -39,20 +39,22 @@ $padding-frame: 1.55rem;
 */
 
 body {
-  font-family: 'Karla', sans-serif;
   background-color:  hsl(204, 43%, 93%);
+  font-family: 'Karla', sans-serif;
 }
 
 .card {
-  /**/ background-color: beige;
-  /**/ border: 1px solid red;
-
   display: flex;
   flex-direction: column;
   flex-wrap: no-wrap;
 
   height: 100%;
   max-width: 375px/*425px*/;
+
+
+  overflow: hidden;
+  box-shadow: .5px .5px 2rem 1.5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
 
 
   .card-description {
@@ -62,7 +64,6 @@ body {
     
 
     background-color: rgb(255, 255, 255);
-    /**/ border: 1px solid cyan;
     
     .card-description-body {
       text-align: left;
@@ -98,7 +99,6 @@ body {
 
 
     background-color: hsl(179, 62%, 43%);
-    /**/ border: 1px solid cyan;
 
     .card-subscription-body {
       color: white;
@@ -157,7 +157,6 @@ body {
 
 
     background-color: rgb(74,190,189);
-    /**/ border: 1px solid cyan;
 
     .card-benefits-body {
       color: white;
