@@ -14,11 +14,16 @@ $tablet-width: 450px;
 $laptop-width: 1024px;
 
 @mixin title {
-  padding-bottom: 1.35rem;
+  /*padding-bottom: 1.35rem;
 
 
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 700;*/
+  margin-bottom: 1.3rem;
+
+        
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 @mixin section-flex {
@@ -48,7 +53,6 @@ body {
   flex-wrap: no-wrap;
 
   height: 100%;
- 
   max-width: 375px/*425px*/;
 
 
@@ -66,19 +70,19 @@ body {
       line-height: 1.35rem;
 
       &__title {
-        @include title;
+        margin-bottom: 1.45rem;
 
 
         color: rgb(103,170,172);
+        font-size: 1.3rem;
+        font-weight: 700;
       }
 
       &__beacon-text {
-        padding-bottom: 1rem;
+        @include title;
 
         
         color: rgb(218,238,125);
-        font-size: 1.1rem;
-        font-weight: 600;
       }
       
       &__explanatory-text {
@@ -89,22 +93,60 @@ body {
   }
 
   .card-subscription {
-    /**/ background-color: rgb(156, 226, 203);
+    @include section-flex;
+    
+    padding: $padding-frame;
+
+
+    background-color: rgb(43,179,177);
     /**/ border: 1px solid cyan;
 
-    @include section-flex;
-
-    padding: 1.5rem;
-
     .card-subscription-body {
-      &__title {}
+      color: white;
 
-      &__conditions {}
-        &__price {}
-        &__term {}
-        &__profit-summary {}
+      &__title {
+        @include title;
+      }
+
+      &__conditions {
+      }
+        &__price {
+          display: inline-block;
+
+
+          font-weight: 600;
+          font-size: 1.8rem;
+          
+        }
+        &__term {
+          display: inline-block;
+          margin-left: .5rem;
+
+
+          vertical-align: 35%;
+          opacity: .5;
+        }
+        &__profit-summary {
+          margin-top: .65rem;
+
+
+          color: rgb(206,255,255);
+        }
       
-      &__signup-btn {}
+      &__signup-btn {
+        display: block;
+        padding: 1rem;
+        margin-top: 1.2rem;
+
+
+        background-color: rgb(191,223,50);
+        color: inherit;
+        font-weight: 600;
+        text-align: center;
+
+        box-shadow: .5px .5px 2rem 1px rgba(0, 0, 0, 0.3);
+        border-radius: 7px;
+      }
     }
   }
 
