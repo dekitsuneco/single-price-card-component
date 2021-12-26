@@ -15,11 +15,6 @@ $tablet-width: 450px;
 $laptop-width: 1024px;
 
 @mixin title {
-  /*padding-bottom: 1.35rem;
-
-
-  font-size: 1.3rem;
-  font-weight: 700;*/
   margin-bottom: 1.3rem;
 
         
@@ -34,9 +29,6 @@ $laptop-width: 1024px;
 $padding-frame: 1.55rem;
 
 
-/*!Make it stretch
-!Add margins starting from somewhere out of this - [375, 425, 450]
-*/
 
 body {
   background-color:  hsl(204, 43%, 93%);
@@ -44,7 +36,11 @@ body {
 }
 
 .container {
-  @media (min-width: 376px) {
+  height: 100%;
+
+
+  @media (min-width: $mobile-big-width) {
+    height: auto;
     padding: 1rem;
   }
 }
@@ -55,14 +51,14 @@ body {
   flex-wrap: no-wrap;
 
   height: 100%;
-  max-width: 375px/*425px*/;
+  max-width: 375px;
 
 
   overflow: hidden;
   box-shadow: .5px .5px 2rem 1.5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
 
-  @media (min-width: 376px) {
+  @media (min-width: $mobile-big-width) {
     height: auto;
     margin: 1rem auto;
   }
@@ -126,30 +122,28 @@ body {
         @include title;
       }
 
-      &__conditions {
+      &__price {
+        display: inline-block;
+
+
+        font-weight: 600;
+        font-size: 1.8rem;
+        
       }
-        &__price {
-          display: inline-block;
+      &__term {
+        display: inline-block;
+        margin-left: .5rem;
 
 
-          font-weight: 600;
-          font-size: 1.8rem;
-          
-        }
-        &__term {
-          display: inline-block;
-          margin-left: .5rem;
+        vertical-align: 35%;
+        opacity: .5;
+      }
+      &__profit-summary {
+        margin-top: .65rem;
 
 
-          vertical-align: 35%;
-          opacity: .5;
-        }
-        &__profit-summary {
-          margin-top: .65rem;
-
-
-          color: rgb(206,255,255);
-        }
+        color: rgb(206,255,255);
+      }
       
       &__signup-btn {
         display: block;
