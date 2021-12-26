@@ -32,6 +32,11 @@ $padding-frame: 1.55rem;
 
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+
   background-color:  hsl(204, 43%, 93%);
   font-family: 'Karla', sans-serif;
 }
@@ -54,13 +59,15 @@ body {
   max-width: 375px;
 
 
-  overflow: hidden;
   box-shadow: .5px .5px 2rem 1.5px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
 
   @media (min-width: $mobile-big-width) {
     height: auto;
     margin: 1rem auto;
+
+
+    overflow: hidden;
   }
 
   @media (min-width: $laptop-width) {
@@ -212,6 +219,25 @@ body {
         color: rgb(206,255,255);
         line-height: 1.2rem;
       }
+    }
+  }
+}
+
+footer {
+  display: none;
+
+  @media (min-width: $mobile-big-width) {
+    display: block;
+    margin-top: auto;
+  }
+
+  .attribution { 
+    margin-top: auto;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
     }
   }
 }
