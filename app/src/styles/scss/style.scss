@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;600;700&display=swap');
 
 
-
 $mobile-width: 320px;
 $mobile-big-width: 375px;
 $tablet-width: 450px;
@@ -21,7 +20,6 @@ $padding-frame: 1.55rem;
 @mixin section-flex {
   flex: 1 1 33%;
 }
-
 
 
 
@@ -234,11 +232,3 @@ footer {
     }
   }
 }
-
-
-
-
-
-
-
-
